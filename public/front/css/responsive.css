@@ -1,0 +1,120 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	
+	/* .section {
+        height: 50vh;
+    } */
+
+    .center {
+		top: 45% !important;
+		left: 50% !important;
+		transform: translate(-50%, -50%) !important;
+		width: 100% !important;
+	}
+
+
+	.publication-right-inner {
+		width: 100%;
+		top: 50%;
+		left: 0% !important;
+		position:inherit ;
+		transform: translateY(-50%);
+	}
+
+}
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+}
+
+
+
+/* Mobile Responsive  */
+@media only screen and (max-width: 600px) {
+	.logo-area{
+		width: 60% !important;
+	}
+	.section_area{
+		width: 90% !important;
+		margin: auto !important;
+	}
+	.text-area{
+		width: 100% !important;
+	}
+	.home-area{
+		width: 100% !important;
+	}
+
+	.groupe_area_responsive{
+		width: 84% !important;
+	}
+	.responsive_hr{
+		margin-top: 6vh !important;
+	}
+	.pera_responsive{
+		width: 100% !important;
+	}
+	.news-img{
+		width: 100% !important;
+	}
+}
+
+
+
+
+
+
+
+
