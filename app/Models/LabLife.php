@@ -5,9 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Values extends Model
+class LabLife extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description'];
+
+    protected $fillable = [
+        'title',
+        'image'
+    ];
+
 }

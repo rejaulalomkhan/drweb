@@ -11,13 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('peoples', function (Blueprint $table) {
+        Schema::create('research_contents', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('designation');
-            $table->string('email')->nullable();
-            $table->string('image')->nullable();
-            $table->text('description')->nullable();
+            $table->string('block_title');
+            $table->string('block_image');
+            $table->string('block_anchor_id');
+            $table->string('section_anchor_id')->unique();
+            $table->string('section_title');
+            $table->string('section_image');
+            $table->longText('section_description');
             $table->boolean('status')->default(1);
             $table->timestamps();
         });
@@ -28,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('peoples');
+        Schema::dropIfExists('research_contents');
     }
 };

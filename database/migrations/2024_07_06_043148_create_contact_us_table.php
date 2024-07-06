@@ -11,9 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('publications', function (Blueprint $table) {
+        Schema::create('contact_us', function (Blueprint $table) {
             $table->id();
-            $table->longText('description');
+            $table->string('top_title');
+            $table->string('image');
+            $table->string('bottom_title');
+            $table->string('lab_address');
+            $table->string('office_address');
+            $table->string('email');
             $table->timestamps();
         });
     }
@@ -23,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('publications');
+        Schema::dropIfExists('contact_us');
     }
 };
