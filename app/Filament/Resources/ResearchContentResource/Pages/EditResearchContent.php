@@ -10,6 +10,11 @@ class EditResearchContent extends EditRecord
 {
     protected static string $resource = ResearchContentResource::class;
 
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+
     protected function getHeaderActions(): array
     {
         return [

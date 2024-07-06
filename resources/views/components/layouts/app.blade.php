@@ -35,7 +35,7 @@
                                 <a class="nav-link" wire:navigate href="{{ route('publicationPage') }}">Publications</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="people.html">People</a>
+                                <a class="nav-link" href="{{ route('peoplePage') }}">People</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="our-values.html">Our Values</a>
