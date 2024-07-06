@@ -71,7 +71,7 @@
                                             including the Burroughs Wellcome Fund Career Award for Medical Sciences, the
                                             AACR Gertrude B. Elion Award, the HHMI Faculty Scholar Award, and an NCI
                                             Outstanding Investigator Award.</p>
-                                        <a href="people.html" class="btn text-uppercase mt-3 mb-5 site-btn"> View All People</a>
+                                        <a href="{{ route('people') }}" class="btn text-uppercase mt-3 mb-5 site-btn"> View All People</a>
                                     </div>
                                 </div>
 
