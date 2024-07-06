@@ -24,7 +24,7 @@
                     <div class="row ">
                             @foreach ($researchContent as $content)
                                 <div class="col-12 col-md-4 col-lg-4">
-                                    <a href="#{{ $content->block_anchor_id }}" style="text-decoration: none; color: black;">
+                                    <a href="#{{ $content->id }}" style="text-decoration: none; color: black;">
                                         <div class="card-area my-2">
                                             <div class="card p-3" style="background-color: var(--card-color);">
                                                 @if ($content->block_image !='')
@@ -48,7 +48,7 @@
         {{-- Section here  --}}
         @foreach ($researchContent as $sectionContent)
 
-            <section class="section_area " id="{{ $sectionContent->block_anchor_id }}">
+            <section class="section_area " id="{{ $sectionContent->id }}">
                 <div class="cotainer-fluid">
                     <div class="container">
                         <h2 class="text-center"> {{ $sectionContent->section_title }} </h2>

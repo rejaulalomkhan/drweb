@@ -15,8 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('block_title');
             $table->string('block_image');
-            $table->string('block_anchor_id');
-            $table->string('section_anchor_id')->unique();
             $table->string('section_title');
             $table->string('section_image');
             $table->longText('section_description');

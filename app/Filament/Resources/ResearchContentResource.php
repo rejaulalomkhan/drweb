@@ -29,32 +29,20 @@ class ResearchContentResource extends Resource
                             Forms\Components\TextInput::make('block_title')
                                 ->required()
                                 ->maxLength(255),
-                            Forms\Components\TextInput::make('block_anchor_id')
-                                ->required()
-                                ->readOnly()
-                                ->maxLength(255),
                             Forms\Components\FileUpload::make('block_image')
                             ->image()
-                            ->required()
-                            ->columnSpan(2),
+                            ->required(),
                 ])->columns(2),
 
                 Section::make('Section Details')
                 ->description('Add Section details')
                 ->schema([
-                            Forms\Components\TextInput::make('section_anchor_id')
-                            ->unique()
-                            ->live(debounce: 700)
-                            ->afterStateUpdated(fn (Set $set, ?string $state) => $set('block_anchor_id', Str::slug($state)))
-                            ->required()
-                            ->maxLength(255),
                             Forms\Components\TextInput::make('section_title')
                                 ->required()
                                 ->maxLength(255),
                             Forms\Components\FileUpload::make('section_image')
                                 ->image()
-                                ->required()
-                                ->columnSpan(2),
+                                ->required(),
                             Forms\Components\RichEditor::make('section_description')
                                 ->required()
                                 ->columnSpanFull(),
@@ -73,12 +61,6 @@ class ResearchContentResource extends Resource
                 Tables\Columns\TextColumn::make('block_title')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('block_image'),
-                Tables\Columns\TextColumn::make('block_anchor_id')
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('section_anchor_id')
-                    ->searchable()
-                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('section_title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('section_description')

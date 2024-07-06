@@ -35,22 +35,22 @@
                                 <a class="nav-link" wire:navigate href="{{ route('publicationPage') }}">Publications</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('peoplePage') }}">People</a>
+                                <a class="nav-link" wire:navigate href="{{ route('peoplePage') }}">People</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="our-values.html">Our Values</a>
+                                <a class="nav-link" wire:navigate href="{{ route('values') }}">Our Values</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="eunus_ali.html">Eunus Ali</a>
+                                <a class="nav-link" wire:navigate href="{{ route('eunusAli') }}">Eunus Ali</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="gallary.html">Social / Lab Life</a>
+                                <a class="nav-link" wire:navigate href="{{ route('labLife') }}">Social / Lab Life</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="news.html">News</a>
+                                <a class="nav-link" wire:navigate href="{{ route('aboutUs') }}">News</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact Us</a>
+                                <a class="nav-link" wire:navigate href="{{ route('contact') }}">Contact Us</a>
                             </li>
                         </ul>
                     </div>

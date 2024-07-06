@@ -12,8 +12,6 @@ class ResearchContent extends Model
     protected $fillable = [
         'block_title',
         'block_image',
-        'block_anchor_id',
-        'section_anchor_id',
         'section_title',
         'section_image',
         'section_description',
