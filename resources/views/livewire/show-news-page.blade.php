@@ -25,7 +25,8 @@
                             @if ($new->image =='')
                                 <div class="col-12 col-md-12 col-lg-12 ">
                                     <h3 class="fw-bold" style="font-size: 12.5pt; font-family: arial;">{{ $new->title }}</h3>
-                                    <p class=""><i>{{ $new->created_at }}</i></p>
+                                    <p class=""><i>{{ \Carbon\Carbon::parse($new->created_at)->isoFormat('LL') }}</i></p>
+                                    <p></p>
 
                                     <p class="text-start" style="font-size: 12.5pt; font-family: calibri ;">{!! $new->content !!}</p>
                                 </div>

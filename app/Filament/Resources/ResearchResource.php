@@ -4,6 +4,7 @@ namespace App\Filament\Resources;
 use Filament\Forms\Form;
 use App\Filament\Resources\ResearchResource\Pages;
 use App\Filament\Resources\ResearchResource\RelationManagers;
+use App\Filament\Resources\ResearchResource\Widgets\ResearchStatsOverview;
 use App\Models\Research;
 use Filament\Forms;
 
@@ -19,7 +20,7 @@ class ResearchResource extends Resource
 
 
     protected static ?string $navigationGroup = 'Research';
-    
+
     protected static ?string $navigationLabel = 'Research Page';
     protected static ?int $navigationSort = 1;
     protected static ?string $navigationIcon = 'heroicon-o-presentation-chart-line';
@@ -73,6 +74,15 @@ class ResearchResource extends Resource
             //
         ];
     }
+
+
+    protected function getHeaderWidgets(): array
+    {
+        return [
+            ResearchStatsOverview::class,
+        ];
+    }
+
 
     public static function getPages(): array
     {

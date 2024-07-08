@@ -2,16 +2,17 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SettingsResource\Pages;
-use App\Filament\Resources\SettingsResource\RelationManagers;
-use App\Models\Settings;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Settings;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Forms\Components\Section;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\SettingsResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\SettingsResource\RelationManagers;
 
 class SettingsResource extends Resource
 {
@@ -23,7 +24,25 @@ class SettingsResource extends Resource
     {
         return $form
             ->schema([
-                //
+
+                Section::make('Block Details')
+                ->description('Add block details')
+                ->schema([
+                            Forms\Components\TextInput::make('SiteName')
+                            ->required()
+                            ->maxLength(100),
+                            Forms\Components\FileUpload::make('SiteLogo')
+                            ->image()
+                            ->required(),
+                            Forms\Components\FileUpload::make('favicon')
+                            ->image()
+                            ->required(),
+                            Forms\Components\RichEditor::make('block_title')
+                                ->required(),
+                ])->columns(2),
+
+
+                Forms\Components\TextInput::make('email')
             ]);
     }
 

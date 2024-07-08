@@ -37,6 +37,7 @@ class ResearchContentResource extends Resource
                             Forms\Components\FileUpload::make('block_image')
                             ->image()
                             ->required(),
+                            
                 ])->columns(2),
 
                 Section::make('Section Details')
