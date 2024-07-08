@@ -21,6 +21,8 @@ class PeoplesResource extends Resource
 {
     protected static ?string $model = Peoples::class;
 
+    protected static ?string $navigationGroup = 'Peoples';
+    protected static ?string $navigationLabel = 'All Peoples';
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
     public static function form(Form $form): Form
@@ -69,6 +71,7 @@ class PeoplesResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

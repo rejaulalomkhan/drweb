@@ -3,11 +3,16 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Publications;
 
 class ShowPublicationPage extends Component
 {
     public function render()
     {
-        return view('livewire.show-publication-page');
+        //publications model content get here
+        $publications = Publications::all();
+        return view('livewire.show-publication-page',[
+                'publications' => $publications
+            ]);
     }
 }

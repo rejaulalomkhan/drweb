@@ -15,8 +15,13 @@ use App\Filament\Resources\ResearchContentResource\Pages;
 
 class ResearchContentResource extends Resource
 {
+    public static function getNavigationBadge(): ?string
+        {
+            return static::getModel()::count();
+        }
     protected static ?string $model = ResearchContent::class;
     protected static ?string $navigationGroup = 'Research';
+    protected static ?int $navigationSort = 2;
     protected static ?string $navigationIcon = 'heroicon-o-presentation-chart-bar';
 
     public static function form(Form $form): Form
@@ -62,7 +67,8 @@ class ResearchContentResource extends Resource
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('block_image'),
                 Tables\Columns\TextColumn::make('section_title')
-                    ->searchable(),
+                    ->searchable()
+                    ->limit(20),
                 Tables\Columns\TextColumn::make('section_description')
                     ->html()
                     ->limit(50) // You can limit the displayed content length for better readability
@@ -88,6 +94,7 @@ class ResearchContentResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

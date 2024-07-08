@@ -16,8 +16,12 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class ResearchResource extends Resource
 {
     protected static ?string $model = Research::class;
+
+
     protected static ?string $navigationGroup = 'Research';
+    
     protected static ?string $navigationLabel = 'Research Page';
+    protected static ?int $navigationSort = 1;
     protected static ?string $navigationIcon = 'heroicon-o-presentation-chart-line';
 
     public static function form(Form $form): Form

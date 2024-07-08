@@ -17,7 +17,10 @@ class LabLifeResource extends Resource
 {
     protected static ?string $model = LabLife::class;
 
+    protected static ?string $navigationGroup = 'Other Pages';
     //navigation title
+
+    protected static ?int $navigationSort = 5;
     protected static ?string $navigationLabel = 'Lab Life';
     protected static ?string $navigationIcon = 'heroicon-o-beaker';
 
@@ -26,7 +29,7 @@ class LabLifeResource extends Resource
         return $form
             ->schema([
                 Forms\Components\TextInput::make('title')
-                    ->maxLength(255)
+                    ->maxLength(30)
                     ->default(null),
                 Forms\Components\FileUpload::make('image')
                     ->image()
