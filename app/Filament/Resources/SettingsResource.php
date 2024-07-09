@@ -25,8 +25,8 @@ class SettingsResource extends Resource
         return $form
             ->schema([
 
-                Section::make('Block Details')
-                ->description('Add block details')
+                Section::make('Website Details')
+                ->description('Add Website details')
                 ->schema([
                             Forms\Components\TextInput::make('SiteName')
                             ->required()
@@ -37,12 +37,26 @@ class SettingsResource extends Resource
                             Forms\Components\FileUpload::make('favicon')
                             ->image()
                             ->required(),
-                            Forms\Components\RichEditor::make('block_title')
+                            Forms\Components\RichEditor::make('SiteDescription')
                                 ->required(),
                 ])->columns(2),
+                Section::make('Footer Info')
+                ->description('Add Footer details')
+                ->schema([
+                            Forms\Components\TextInput::make('Email')
+                            ->email()
+                            ->columnSpan(1),
+                            Forms\Components\TextInput::make('Phone')
+                            ->placeholder('Number')
+                            ->columnSpan(1),
+                            Forms\Components\TextInput::make('PhoneOptional')
+                                ->placeholder('Add 2nd Phone Number')
+                                ->columnSpan(1),
+                                Forms\Components\RichEditor::make('Address')
+                                ->columnSpan(2),
 
+                ])->columns(2),
 
-                Forms\Components\TextInput::make('email')
             ]);
     }
 
@@ -50,7 +64,10 @@ class SettingsResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('SiteName')
+                    ->searchable(),
+                Tables\Columns\ImageColumn::make('SiteLogo'),
+                Tables\Columns\ImageColumn::make('favicon'),
             ])
             ->filters([
                 //

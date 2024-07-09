@@ -23,7 +23,7 @@ return new class extends Migration
             // $table->string('MetaImage')->nullable();
             $table->string('Email')->nullable();
             $table->string('Phone')->nullable();
-            $table->string('2ndPhone')->nullable();
+            $table->string('PhoneOptional')->nullable();
             $table->longText('Address')->nullable();
             // $table->string('Facebook')->nullable();
             // $table->string('Twitter')->nullable();

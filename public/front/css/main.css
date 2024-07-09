@@ -21,7 +21,7 @@
     --my-font-pera : calibri;
 
     --card-color: #EBD7D8;
-    
+
 }
 
 .section_area{
@@ -475,7 +475,7 @@ main--interior {
     /* background-image: linear-gradient(to right, rgba(255,0,0,1), rgba(255,0,0,0)) , url('../images/eunus_ali.jpg'); */
     /* background-image: linear-gradient(rgb(70, 70, 70) 0%, rgb(70, 70, 70) 43.75% , rgba(70, 70, 70, 0) 66.25%, rgba(0, 0, 0, 0)),url('../images/eunus_ali.jpg'); */
     /* background: linear-gradient(to right, rgb(70, 70, 70) 0%, rgb(70, 70, 70) 43.75%, rgba(70, 70, 70, 0.8) 50%, rgba(70, 70, 70, 0) 66.25%, rgba(0, 0, 0, 0) 100%),url('../images/matt-vander-heiden-cropped-805x1024.jpg'); */
-    height: 100vh; 
+    height: 100vh;
     width: 100%;
     background-position: center center;
     background-repeat: no-repeat;
@@ -493,6 +493,9 @@ main--interior {
     color: white;
 }
 
+a{
+    text-decoration: none !important;
+}
 
 .parent {
     position: relative;
@@ -546,15 +549,15 @@ main--interior {
     position: absolute;
     max-width: 35.625rem;
     top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .center-2 {
     position: absolute;
     width: 100%;
     top: 50%;
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .banner-text{
     font-size: 1.1875rem;
@@ -666,8 +669,8 @@ main--interior {
 }
 
 .publication-right-inner{
-    width: 100px; 
-    top: 50%; 
+    width: 100px;
+    top: 50%;
     left: 5%;
     position: absolute;
     transform: translateY(-50%);
@@ -699,7 +702,7 @@ main--interior {
     background-color: #fff;
     border-top: .063rem solid #cdcdcd;
 
-    
+
 }
 
 
@@ -708,4 +711,4 @@ main--interior {
 
 
 
-  
+

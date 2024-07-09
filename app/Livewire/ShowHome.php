@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Research;
+use App\Models\Settings;
 use App\Models\FeaturedPeople;
 
 class ShowHome extends Component
@@ -15,8 +16,7 @@ class ShowHome extends Component
             $researches = Research::orderBy('id', 'desc')->get();
             return view('livewire.show-home', [
                 'featuredPeoples' => $featuredPeoples,
-                'researches' => $researches
-
+                'researches' => $researches,
             ]);
     }
 }

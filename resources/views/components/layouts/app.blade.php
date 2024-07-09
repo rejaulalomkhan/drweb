@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
         <link rel="stylesheet" href="{{ asset('front/css/main.css') }}">
         <link rel="stylesheet" href="{{ asset('front/css/responsive.css') }}">
+        <link rel="icon" href="{{ asset('storage/'.App\Models\Settings::latest()->first()->favicon) }}" type="image/x-icon">
         <title>{{ $title ?? 'Home' }}</title>
         @livewireStyles
     </head>
@@ -16,7 +17,7 @@
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light bg-white px-4" id="navbar_top">
                     <a class="navbar-brand w-25 logo-area" href="{{ route('home') }}">
-                        <img src="{{ asset('front/images/Logo-choice_1.png') }}" alt="" class=" w-75">
+                        <img src="{{ asset('storage/'.App\Models\Settings::latest()->first()->SiteLogo) }}" alt="" class=" w-75">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -61,9 +62,6 @@
             {{ $slot }}
 
 
-
-
-
            {{-- footer --}}
 
             <footer class="py-4 bg-dark text-white ">
@@ -71,14 +69,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12 text-center">
-                                <p class="text-secondary"><span class="fw-bold text-uppercase text-secondary">PRINCETON
-                                        UNIVERSITY FRICK LABORATORY</span> / Washington Rd.Princeton, NJ 08544</p>
+                                <p class="text-secondary">{!! App\Models\Settings::latest()->first()->Address !!} </p>
                                 <p class="text-secondary"><span class="fw-bold text-secondary">CELL: </span> <a
-                                        href="tel:562896545" class="text-secondary">562896545 </a> / <span
-                                        class="fw-bold text-secondary">ASST:</span> 608.258.2254</p>
+                                        href="tel:{{ App\Models\Settings::latest()->first()->Phone }}" class="text-secondary" >{{ App\Models\Settings::latest()->first()->Phone }} </a> / <span
+                                        class="fw-bold text-secondary">ASST:</span> {{ App\Models\Settings::latest()->first()->PhoneOptional }}</p>
                                 <p class="text-secondary"><span class="fw-bold text-secondary">Email</span> <a
-                                        href="mailto:dmacmill@princeton.edu"
-                                        class="text-secondary">dmacmill@princeton.edu</a></p>
+                                        href="mailto:{{ App\Models\Settings::latest()->first()->Email }}"
+                                        class="text-secondary">{{ App\Models\Settings::latest()->first()->Email }}</a></p>
                                 <p class="text-secondary">© 2016 The Trustees of Princeton University</p>
                             </div>
                         </div>

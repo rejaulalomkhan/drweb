@@ -2,14 +2,14 @@
     <section>
         <div class="d-flex align-items-center justify-content-center" style="height: 60vh; background-color: #f0f2ff;">
             <div class="w-50 home-area">
-                <h1 class="text-uppercase justify-content-center d-flex fw-bold" style="font-size: var(--my-main-heading);">  Eunus Ali </h1>
+                <h1 class="text-uppercase justify-content-center d-flex fw-bold" style="font-size: var(--my-main-heading);"> {{ App\Models\Settings::latest()->first()->SiteName }} </h1>
 
               <p style="align-items: end; width: 69%; font-family: var(--my-font-pera); font-size: 35px; opacity: 0.6; text-align: right; margin-top: -3%; "
                 class="text-dark d-block mb-3 groupe_area_responsive">groupe</p>
                 <div class="">
                     <div class="center text-center p-2 p-md-0 mt-5 ">
                         <hr style="width: 30vh; margin: auto;  " class="mt-5 responsive_hr">
-                        <p class="banner-text mb-5 mt-3" style="font-size: var(--my-body-text); font-family: var(--my-font-pera);">Innovation in organic chemistry and chemical biology  through the development of general catalysis concepts and  their application to complex targets.</p>
+                        <p class="banner-text" style="font-size: var(--my-body-text); font-family: var(--my-font-pera);">{!! App\Models\Settings::latest()->first()->SiteDescription !!}</p>
                     </div>
                 </div>
             </div>
