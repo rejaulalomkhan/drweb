@@ -236,7 +236,7 @@ main--interior {
 }
 @media screen and (min-width: 64em) {
     .transparent {
-    opacity: 0;
+    opacity: 1;
 }
 }
 .divider {

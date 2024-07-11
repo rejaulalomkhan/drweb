@@ -10,7 +10,7 @@ class ShowPublicationPage extends Component
     public function render()
     {
         //publications model content get here
-        $publications = Publications::all();
+        $publications = Publications::orderBy('id', 'desc')->get();
         return view('livewire.show-publication-page',[
                 'publications' => $publications
             ]);

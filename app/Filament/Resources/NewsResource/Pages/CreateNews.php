@@ -13,4 +13,5 @@ class CreateNews extends CreateRecord
     {
         return $this->getResource()::getUrl('index');
     }
+
 }

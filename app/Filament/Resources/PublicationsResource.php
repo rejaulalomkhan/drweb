@@ -18,6 +18,7 @@ class PublicationsResource extends Resource
     protected static ?string $model = Publications::class;
 
     protected static ?string $navigationGroup = 'Other Pages';
+    protected static ?int $navigationSort = 1;
     protected static ?string $navigationIcon = 'heroicon-o-book-open';
 
     public static function form(Form $form): Form
@@ -53,6 +54,7 @@ class PublicationsResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

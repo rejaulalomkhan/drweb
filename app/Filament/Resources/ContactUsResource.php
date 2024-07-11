@@ -17,7 +17,7 @@ class ContactUsResource extends Resource
 {
     protected static ?string $model = ContactUs::class;
     protected static ?string $navigationGroup = 'Other Pages';
-    protected static ?int $navigationSort = 7;
+    protected static ?int $navigationSort = 9;
 
     protected static ?string $navigationLabel = 'Contact';
 

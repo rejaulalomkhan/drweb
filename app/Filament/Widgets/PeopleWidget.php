@@ -4,6 +4,7 @@ namespace App\Filament\Widgets;
 
 use App\Models\News;
 use App\Models\Peoples;
+use App\Models\Publications;
 use App\Models\ResearchContent;
 use Filament\Support\Enums\IconPosition;
 use Filament\Widgets\StatsOverviewWidget as BaseWidget;
@@ -46,15 +47,15 @@ class PeopleWidget extends BaseWidget
                     'class' => 'cursor-pointer',
                     'onclick' => "window.location.href = '/admin/peoples'",
                 ]),
-            Stat::make('All People', Peoples::count())
-                ->description('All Our Peoples')
+            Stat::make('Publications', Publications::count())
+                ->description('All Publications')
                 ->descriptionIcon('heroicon-o-user-group', IconPosition::Before)
                 ->color('danger')
                 ->icon('heroicon-o-user-group')
-                ->chart([7, 2, 10, 3, 15, 4, 17])
+                ->chart([17, 2, 10, 3, 15, 4, 17])
                 ->extraAttributes([
                     'class' => 'cursor-pointer',
-                    'wire:click' => "\$dispatch('setStatusFilter', { filter: 'processed' })",
+                    'onclick' => "window.location.href = '/admin/publications'",
                 ]),
 
 

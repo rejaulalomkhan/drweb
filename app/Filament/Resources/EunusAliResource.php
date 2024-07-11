@@ -17,7 +17,7 @@ class EunusAliResource extends Resource
 {
     protected static ?string $model = EunusAli::class;
     protected static ?string $navigationGroup = 'Other Pages';
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 2;
     protected static ?string $navigationLabel = 'Eunus Ali';
     protected static ?string $navigationIcon = 'heroicon-o-user-circle';
 
@@ -26,8 +26,13 @@ class EunusAliResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('title')
+                    ->required(),
                 Forms\Components\FileUpload::make('image')
                     ->image()
+                    ->required(),
+                Forms\Components\RichEditor::make('description')
+                    ->columnSpanFull()
                     ->required(),
             ]);
     }
@@ -37,6 +42,10 @@ class EunusAliResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('description')
+                    ->html()
+                    ->limit(20),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

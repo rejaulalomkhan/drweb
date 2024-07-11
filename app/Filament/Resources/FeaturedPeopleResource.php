@@ -74,7 +74,7 @@ class FeaturedPeopleResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                    // Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -90,7 +90,7 @@ class FeaturedPeopleResource extends Resource
     {
         return [
             'index' => Pages\ListFeaturedPeople::route('/'),
-            'create' => Pages\CreateFeaturedPeople::route('/create'),
+            // 'create' => Pages\CreateFeaturedPeople::route('/create'),
             'edit' => Pages\EditFeaturedPeople::route('/{record}/edit'),
         ];
     }
